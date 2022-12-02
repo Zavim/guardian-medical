@@ -8,6 +8,26 @@ export interface Props {
 const { title, description, image = "/placeholder-social.jpg" } = Astro.props;
 ---
 
+<script>
+  import lax from "lax.js";
+  window.onload = function () {
+    lax.init();
+
+    // Add a driver that we use to control our animations
+    lax.addDriver("scrollY", function () {
+      return window.scrollY;
+    });
+
+    lax.addElements(".skyline", {
+      scrollY: {
+        opacity: [
+          [0, "screenHeight/1.5"],
+          [1, 0],
+        ],
+      },
+    });
+  };
+</script>
 <style is:global>
   * {
     margin: 0;
@@ -33,12 +53,14 @@ const { title, description, image = "/placeholder-social.jpg" } = Astro.props;
     padding: 1.25rem 2rem;
     max-width: 60vw;
     text-align: left;
-    background-color: #fff;
     word-wrap: break-word;
     overflow-wrap: break-word;
     line-height: 1.5;
     color: #444;
     background-color: var(--guardian-gray);
+    /* background-image: url("/skyline.jpg");
+    background-repeat: no-repeat;
+    background-position-y: top; */
   }
   h1,
   h2,

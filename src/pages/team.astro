@@ -9,11 +9,17 @@ import Layout from "../layouts/Layout.astro";
   h2 {
     padding: 0 0 0.5rem;
   }
-  /* ul {
-    padding: 0;
-  } */
   p {
     padding: 0.75rem 0 0;
+  }
+  ul {
+    list-style-type: none;
+  }
+  li {
+    padding-bottom: 0.5em;
+  }
+  span {
+    font-weight: bold;
   }
   .member-header-container {
     padding-top: 1rem;
@@ -41,39 +47,51 @@ import Layout from "../layouts/Layout.astro";
       </svg>
     </div>
     <ul>
-      <li>In another life, I'm pretty sure I was a Princess.</li>
       <li>
-        If I won the lottery tomorrow, I would go to a war-torn country and help
-        people… but still show up to work Monday.
+        <span>In another life</span>, I'm pretty sure I was a Princess.
       </li>
       <li>
-        The best piece of advice I've ever been given is: It’s better to be kind
-        than right.
-      </li>
-      <li>If I could invent a holiday, it would involve food and family.</li>
-      <li>
-        What advice would you give a candidate who wants to join our team of
-        superstars? Keep your sense of humor
+        <span>If I won the lottery tomorrow</span>, I would go to a war-torn
+        country and help people… but still show up to work Monday.
       </li>
       <li>
-        If I weren't so damn good at my job, I'd probably be an interior
+        <span>The best piece of advice I've ever been given</span> "It’s better to
+        be kind than right."
+      </li>
+      <li>
+        <span>If I could invent a holiday</span>, it would involve food and
+        family.
+      </li>
+      <li>
+        <span>
+          What advice would you give a candidate who wants to join our team of
+          superstars?
+        </span> Keep your sense of humor.
+      </li>
+      <li>
+        <span>If I weren't so damn good at my job</span> I'd probably be an interior
         designer.
       </li>
-      <li>Cats or dogs? Dogs.</li>
-      <li>If I were a superhero, my superpower would be curing illnesses.</li>
-      <li>When I was 5, I was pretty sure I'd be a lawyer</li>
+      <li><span>Cats or dogs?</span> Dogs.</li>
       <li>
-        Who is someone you admire, and why? Ruth Bader Ginsberg because of her
-        strong sense of justice
+        <span>If I were a superhero</span>, my superpower would be curing
+        illnesses.
       </li>
-      <li>Name three words that you describe you. Impulsive, Funny, Giving</li>
+      <li><span>When I was 5</span>, I was pretty sure I'd be a lawyer</li>
       <li>
-        How do you think your colleagues would describe you? Annoying but worth
-        it
+        <span>Who is someone you admire, and why?</span> Ruth Bader Ginsberg because
+        of her strong sense of justice.
       </li>
       <li>
-        What do you want to make sure you do before you die? Make a palpable
-        difference in lives of the less fortunate
+        <span>Name three words that you describe you.</span> Impulsive, funny, giving.
+      </li>
+      <li>
+        <span>How do you think your colleagues would describe you?</span> Annoying
+        but worth it.
+      </li>
+      <li>
+        <span>What do you want to make sure you do before you die?</span> Make a
+        palpable difference in lives of the less fortunate.
       </li>
     </ul>
   </div>
@@ -91,50 +109,64 @@ import Layout from "../layouts/Layout.astro";
       </div>
     </div>
     <ul>
-      <li>In another life, I'm pretty sure I was racecar driver.</li><li>
+      <li>
+        <span>In another life</span>, I'm pretty sure I was racecar driver.
+      </li><li>
         If I won the lottery tomorrow, I'd start an indoor/outdoor athletic
         training facility. And, you know, keep working here.
       </li>
       <li>
-        The best piece of advice I've ever been given is if you want something
-        done, do it yourself.
+        <span>The best piece of advice I've ever been given</span> "If you want something
+        done, do it yourself."
       </li><li>
-        If I could invent a holiday, it would involve hiking in the wilderness.
+        <span>If I could invent a holiday</span> it would involve hiking in the wilderness.
       </li><li>
-        What advice would you give a candidate who wants to join our team of
-        superstars? Be motivated and persistent.
+        <span>
+          What advice would you give a candidate who wants to join our team of
+          superstars?
+        </span> Be motivated and persistent.
       </li><li>
-        If I weren't so damn good at my job, I'd probably be a couch potato.
+        <span>If I weren't so damn good at my job</span> I'd probably be a couch
+        potato.
       </li>
-      <li>Cats or dogs? My dog’s name is Sophia. Enough said.</li>
-      <li>My favorite word in the English language is faith.</li><li>
-        My least favorite word that has no direct English translation is THAT.
+      <li><span>Cats or dogs?</span> My dog’s name is Sophia. Enough said.</li>
+      <li>
+        <span
+          >My favorite word in the English language is <span
+            style="font-style: italic;">faith.</span
+          >
+        </span>
+      </li><li>
+        <span
+          >My least favorite word that has no direct English translation is
+        </span><span style="font-style: italic;">THAT.</span>
         It should be removed from the English language.
       </li>
       <li>
-        What's the most inspiring part of your job? I am helping others with a
-        solution to a problem.
+        <span>What's the most inspiring part of your job</span>? I am helping
+        others with a solution to a problem.
       </li><li>
-        The most important thing I learned before high school was it costs
-        nothing to be kind.
+        <span>The most important thing I learned before high school was</span> it
+        costs nothing to be kind.
       </li><li>
-        If I were a superhero, my superpower would be I could be in two places
-        at one time.
+        <span>If I were a superhero,</span> my superpower would be the ability to
+        be in two places at one time.
       </li>
       <li>
-        When I was 5, I was pretty sure I'd be a clerk at Lawson’s for the free
-        candy when I grew up.
+        <span>When I was 5,</span> I was pretty sure I'd be a clerk at Lawson’s for
+        the free candy when I grew up.
       </li><li>
-        Who is someone you admire, and why? I admire my grandmother for leaving
-        her hometown of Donegal, Ireland.
+        <span>Who is someone you admire, and why?</span> I admire my grandmother
+        for leaving her hometown of Donegal, Ireland.
       </li><li>
-        Name three words that you describe you. Honest, reliable, friendly
+        <span>Name three words that you describe you.</span> Honest, reliable,
+        friendly.
       </li><li>
-        How do you think your colleagues would describe you? Hard working and
-        fun.
+        <span>How do you think your colleagues would describe you?</span
+        > Hard-working and fun.
       </li><li>
-        What do you want to make sure you do before you die? Travel to Italy
-        with my family.
+        <span>What do you want to make sure you do before you die?</span> Travel
+        to Italy with my family.
       </li>
     </ul>
   </div>
@@ -154,53 +186,62 @@ import Layout from "../layouts/Layout.astro";
     </div>
     <ul>
       <li>
-        1. In another life, I'm pretty sure I was introverted as I am NOT that
-        way in this life.
+        <span>In another life,</span> I'm pretty sure I was introverted as I am NOT
+        that way in this life.
       </li>
       <li>
-        2. If I won the lottery tomorrow, I’d donate a lot of money to helping
-        families afflicted by cancer. And, you know, keep working here.
+        <span>If I won the lottery tomorrow,</span> I’d donate a lot of money to
+        helping families afflicted by cancer. And, you know, keep working here.
       </li>
       <li>
-        The best piece of advice I've ever been given is to be part of the
-        solution.
+        <span>The best piece of advice I've ever been given</span> "Be part of the
+        solution."
       </li>
       <li>
-        If I could invent a holiday, it would involve an aluminum pole, and the
-        airing of grievances. Wait, Seinfeld beat me to it. FESTIVUS for the
-        rest of us!
+        <span>If I could invent a holiday</span> it would involve an aluminum pole,
+        and the airing of grievances. Wait, Seinfeld beat me to it. FESTIVUS for
+        the rest of us!
       </li>
       <li>
-        What advice would you give a candidate who wants to join our team of
-        superstars? Balance life and work.
+        <span>
+          What advice would you give a candidate who wants to join our team of
+          superstars?
+        </span> Balance life and work.
       </li>
       <li>
-        If I weren't so damn good at my job, I'd probably be a writer. I would
-        say “If I were so damn good at writing I’d probably be doing that.
+        <span>If I weren't so damn good at my job</span> I'd probably be a writer.
+        I would say "If I were so damn good at writing I’d probably be doing that."
       </li>
       <li>
-        Cats or dogs? Dogs. Not that you must choose, but cats scare the hell
-        out of me.
+        <span>Cats or dogs?</span> Dogs. Not that you must choose, but cats scare
+        the hell out of me.
       </li>
       <li>
-        The most important thing I learned before high school was that my world
-        around me is very small.
-      </li>
-      <li>If I were a superhero, my superpower would be EMPATHY.</li>
-      <li>
-        When I was 5, I was pretty sure I'd be a professional hockey player when
-        I grew up.
+        <span>The most important thing I learned before high school</span> was that
+        my world around me is very small.
       </li>
       <li>
-        Who is someone you admire, and why? My daughter, Ana. She (we) lost her
-        brother to cancer. Ana graduated high school and moved to Chicago to
-        college. Her strength and love know no bounds.
+        <span>If I were a superhero</span> my superpower would be EMPATHY.
       </li>
-      <li>Name three words that you describe you. Empathetic, Loving, Funny</li>
-      <li>How do you think your colleagues would describe you? Loud</li>
       <li>
-        What do you want to make sure you do before you die? Live every moment
-        with compassion and love.
+        <span>When I was 5,</span> I was pretty sure I'd be a professional hockey
+        player when I grew up.
+      </li>
+      <li>
+        <span>Who is someone you admire, and why?</span> My daughter, Ana. She (we)
+        lost her brother to cancer. Ana graduated high school and moved to Chicago
+        to college. Her strength and love know no bounds.
+      </li>
+      <li>
+        <span>Name three words that you describe you.</span> Empathetic, loving,
+        funny
+      </li>
+      <li>
+        <span>How do you think your colleagues would describe you?</span> Loud.
+      </li>
+      <li>
+        <span>What do you want to make sure you do before you die?</span> Live every
+        moment with compassion and love.
       </li>
     </ul>
   </div>

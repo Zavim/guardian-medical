@@ -3,13 +3,12 @@ import HeaderLink from "./HeaderLink.astro";
 ---
 
 <header>
-  <div class="header-container">
-    <img
-      src="/logo-transparent.svg"
-      class="logo"
-      alt="Guardian Medical Equipment logo, a speech bubble containing a G. The text 'Guardian Medical Equipment' is below"
-    />
-  </div>
+  <img
+    class="skyline"
+    src="/skyline.jpg"
+    alt="skyline view of Cleveland Ohio"
+  />
+
   <nav class="header-link-container">
     <HeaderLink href="/">Home</HeaderLink>
     <HeaderLink href="/about">Sell to Us!</HeaderLink>
@@ -17,10 +16,6 @@ import HeaderLink from "./HeaderLink.astro";
   </nav>
 </header>
 <style>
-  .header-container {
-    display: flex;
-    justify-content: space-between;
-  }
   .header-link-container {
     position: relative;
     justify-content: space-between;
@@ -39,8 +34,10 @@ import HeaderLink from "./HeaderLink.astro";
   .header-link-container a:hover {
     background-color: var(--guardian-dark-green);
   }
-  .logo {
-    width: 10rem;
-    padding-bottom: 2em;
+  .skyline {
+    position: fixed;
+    top: 1.25rem;
+    z-index: -1;
+    width: 60%;
   }
 </style>
