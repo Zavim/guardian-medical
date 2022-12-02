@@ -1,0 +1,54 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
+---
+
+<style is:global>
+  p {
+    padding: 0.75rem 1rem 0;
+  }
+  h2 {
+    padding: 0.5rem 0 0 0.75rem;
+  }
+  .opening-container {
+    padding: 1.5rem 10rem 2rem;
+  }
+  .story-container {
+    padding: 1.5rem 10rem;
+    border-radius: 0 0 10px 10px;
+    background-color: hsl(0, 0%, 90%);
+    /* background-color: var(--guardian-green); */
+  }
+  .equipment-list {
+    list-style-type: none;
+  }
+  .equipment-list li {
+    padding: 0.25rem 0;
+  }
+</style>
+
+<style>
+  .content-container {
+    border-radius: 0 10px 10px;
+    background-color: hsl(0, 0%, 100%);
+    box-shadow: 0 0.25rem 0.5rem hsl(0, 0%, 60%);
+  }
+</style>
+
+<html lang="en">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+
+  <body>
+    <Header />
+    <main>
+      <div class="content-container">
+        <slot />
+      </div>
+    </main>
+    <Footer />
+  </body>
+</html>

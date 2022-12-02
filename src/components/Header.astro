@@ -1,0 +1,46 @@
+---
+import HeaderLink from "./HeaderLink.astro";
+---
+
+<header>
+  <div class="header-container">
+    <img
+      src="/logo-transparent.svg"
+      class="logo"
+      alt="Guardian Medical Equipment logo, a speech bubble containing a G. The text 'Guardian Medical Equipment' is below"
+    />
+  </div>
+  <nav class="header-link-container">
+    <HeaderLink href="/">Home</HeaderLink>
+    <HeaderLink href="/about">Sell to Us!</HeaderLink>
+    <HeaderLink href="/team">Our Team</HeaderLink>
+  </nav>
+</header>
+<style>
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  .header-link-container {
+    position: relative;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    width: 20rem;
+    border-radius: 10px 10px 0 0;
+    /* box-shadow: 0 0.25rem 0.5rem hsl(0, 0%, 60%); */
+    background-color: var(--guardian-green);
+    overflow: hidden;
+  }
+  .header-link-container a {
+    color: #fffcf7;
+    padding: 1em;
+  }
+  .header-link-container a:hover {
+    background-color: var(--guardian-dark-green);
+  }
+  .logo {
+    width: 10rem;
+    padding-bottom: 2em;
+  }
+</style>
