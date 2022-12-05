@@ -4,7 +4,7 @@ import Layout from "../layouts/Layout.astro";
 
 <style>
   svg {
-    padding: 0 1rem 1rem 0;
+    /* padding: 0 1rem 1rem 0; */
   }
   h2 {
     padding: 0 0 0.5rem;
@@ -22,10 +22,15 @@ import Layout from "../layouts/Layout.astro";
     font-weight: bold;
   }
   .member-header-container {
-    padding-top: 1rem;
+    padding: 1rem 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
+  }
+  .headshot {
+    width: 9.6rem;
+    border-radius: 50%;
+    border: 0.5rem solid var(--guardian-green);
   }
   .story-container {
     border-radius: 0;
@@ -35,16 +40,17 @@ import Layout from "../layouts/Layout.astro";
 <Layout>
   <div class="opening-container">
     <div class="member-header-container">
-      <div style="padding-bottom: 1rem;">
+      <div>
         <h2>Shoshana Freedman</h2>
         <h3>VP Sales and Purchasing</h3>
         <h3>Voted Loudest and Most Fun Employee</h3>
       </div>
 
-      <svg width="10rem" height="10rem" xmlns="http://www.w3.org/2000/svg">
+      <!-- <svg width="10rem" height="10rem" xmlns="http://www.w3.org/2000/svg">
         <circle cx="50%" cy="50%" r="4.8rem" fill="var(--guardian-green)"
         ></circle>
-      </svg>
+      </svg> -->
+      <img class="headshot" src="/shosh.jpg" alt="" />
     </div>
     <ul>
       <li>
@@ -102,7 +108,7 @@ import Layout from "../layouts/Layout.astro";
         <circle cx="50%" cy="50%" r="4.8rem" fill="var(--guardian-green)"
         ></circle>
       </svg>
-      <div style="padding-bottom: 1rem;  text-align: right">
+      <div style="text-align: right">
         <h2>Thunder Dan</h2>
         <h3>Voice of Reason</h3>
         <h3>Guardian Medical’s Travelin’ Man</h3>
@@ -173,16 +179,17 @@ import Layout from "../layouts/Layout.astro";
 
   <div class="opening-container">
     <div class="member-header-container">
-      <div style="padding-bottom: 1rem;">
+      <div>
         <h2>Brandt Butze</h2>
         <h3>Company Cheerleader</h3>
         <h3>Sometimes Grumpiest Man at Work</h3>
       </div>
 
-      <svg width="10rem" height="10rem" xmlns="http://www.w3.org/2000/svg">
+      <!-- <svg width="10rem" height="10rem" xmlns="http://www.w3.org/2000/svg">
         <circle cx="50%" cy="50%" r="4.8rem" fill="var(--guardian-green)"
         ></circle>
-      </svg>
+      </svg> -->
+      <img class="headshot" src="/brandt.jpg" alt="" />
     </div>
     <ul>
       <li>
