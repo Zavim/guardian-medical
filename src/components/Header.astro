@@ -9,24 +9,45 @@ import HeaderLink from "./HeaderLink.astro";
     alt="skyline view of Cleveland Ohio"
   />
 
-  <nav class="header-link-container">
-    <HeaderLink href="/">Home</HeaderLink>
-    <HeaderLink href="/sell">Sell to Us!</HeaderLink>
-    <HeaderLink href="/team">Our Team</HeaderLink>
-    <HeaderLink href="/equipment">Equipment/Service</HeaderLink>
-  </nav>
+  <div class="flex">
+    <HeaderLink href="/">
+      <img
+        src="/logo-transparent.svg"
+        class="header-logo logo"
+        alt="Guardian Medical Equipment logo, a speech bubble containing a G. The text 'Guardian Medical Equipment' is below"
+      />
+    </HeaderLink>
+    <nav class="header-link-container">
+      <HeaderLink href="/sell">Sell to Us!</HeaderLink>
+      <HeaderLink href="/team">Our Team</HeaderLink>
+      <HeaderLink href="/equipment">Equipment/Service</HeaderLink>
+    </nav>
+  </div>
 </header>
 <style>
+  .flex {
+    display: flex;
+    align-items: flex-end;
+  }
   .header-link-container {
     position: relative;
-    justify-content: space-between;
     display: flex;
     align-items: center;
-    width: 32rem;
-    border-radius: 10px 10px 0 0;
+    /* width: 26rem; */
+    border-radius: 0 10px 0 0;
     /* box-shadow: 0 0.25rem 0.5rem hsl(0, 0%, 60%); */
     background-color: var(--guardian-green);
     overflow: hidden;
+  }
+  .header-logo {
+    position: relative;
+    display: flex;
+    align-items: center;
+    border-radius: 10px 10px 0 0;
+    background-color: var(--guardian-green);
+  }
+  .header-logo:hover {
+    background-color: var(--guardian-dark-green);
   }
   .header-link-container a {
     color: #fffcf7;
@@ -40,5 +61,9 @@ import HeaderLink from "./HeaderLink.astro";
     top: 0;
     z-index: -1;
     width: 60%;
+  }
+  .logo {
+    width: 7rem;
+    padding: 0.5em 1em;
   }
 </style>
