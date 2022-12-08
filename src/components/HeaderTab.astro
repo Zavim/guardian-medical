@@ -1,0 +1,38 @@
+---
+import HeaderLink from "./HeaderLink.astro";
+---
+
+<script>
+  let open = false;
+  function handleClick() {
+    open = !open;
+  }
+  document
+    .getElementById("header-button")
+    .addEventListener("click", handleClick);
+</script>
+<!-- {open ? } -->
+<div class="header-button-container" id="header-button">
+  <!-- <button class="header-button" id="header-button">o</button> -->
+  <nav class="header-tab">
+    <HeaderLink href="/">Home</HeaderLink>
+    <HeaderLink href="/sell">Sell to Us!</HeaderLink>
+    <HeaderLink href="/team">Our Team</HeaderLink>
+    <HeaderLink href="/equipment">Equipment/Service</HeaderLink>
+  </nav>
+</div>
+
+<style>
+  .header-button-container {
+    display: flex;
+    /* border: none; */
+    border-radius: 10px 0 0 10px;
+    background-color: var(--guardian-green);
+    box-shadow: 0 0.25rem 0.5rem hsl(0, 0%, 60%);
+    position: fixed;
+    /* max-width: min-content; */
+    right: 0;
+    top: 50vh;
+    /* bottom: 15%; */
+  }
+</style>

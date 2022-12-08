@@ -16,11 +16,12 @@ import Layout from "../layouts/Layout.astro";
   }
   .equipment-list {
     padding: 0.75rem 0 0 0.75rem;
+    /* padding: 0.75rem 0 0 0; */
   }
   .flex {
-    padding-top: 2rem;
+    /* padding-top: 2rem; */
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     justify-content: space-between;
   }
   .story-container {
@@ -44,9 +45,10 @@ import Layout from "../layouts/Layout.astro";
       you get a higher bid, we respect that. <br /><br /> - Brandt Butze, Owner
     </p>
 
-    <div class="flex">
+    <div class="contact-container flex">
       <p style="font-weight: bold;">Call Us: 216-929-0679</p>
       <a
+        class="email-button"
         href="mailto:sales@guardianmedicalequip.com?subject=Guardian%20Medical%20Equipment%20Inquiry&body=First%20Name%0ALast%20Name%0AYour message here%21"
       >
         Email Us
@@ -56,7 +58,7 @@ import Layout from "../layouts/Layout.astro";
   <div class="story-container">
     <h2>What We Buy</h2>
     <ul class="equipment-list flex">
-      <div style="padding-right: 15%;">
+      <div class="equipment-list-left">
         <li>Infusion Therapy Equipment/Pumps</li>
         <li>Patient Monitoring Equipment</li>
         <li>Defibrillators</li>
@@ -76,9 +78,9 @@ import Layout from "../layouts/Layout.astro";
       </div>
     </ul>
   </div>
-  <div class="opening-container">
+  <div class="white-container">
     <h2>How We Pay</h2>
-    <ul class="equipment-list">
+    <ul class="equipment-list flex" style="flex-direction: column;">
       <li>Checks Prior to Pickup</li>
       <li>Wire Prior to Pickup</li>
       <li>

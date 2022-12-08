@@ -1,6 +1,7 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
+import HeaderTab from "../components/HeaderTab.astro";
 import Footer from "../components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
 ---
@@ -13,38 +14,115 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
     padding: 0.5rem 0 0 0.75rem;
   }
   body {
-    padding-top: 25%;
+    padding-top: 19.7%;
   }
   .opening-container {
     padding: 1.5rem 10rem 2rem;
-    /* border-radius: 0 0 0 10px; */
+    border-radius: 0 0 10px 10px;
+  }
+  .white-container {
+    padding: 1.5rem 10rem 2rem;
     border-radius: 0 0 10px 10px;
   }
   .story-container {
     padding: 1.5rem 10rem 2rem;
     background-color: hsl(0, 0%, 90%);
-    /* background-color: var(--guardian-green); */
+  }
+  .contact-container {
+    padding-top: 1rem;
   }
   .equipment-list {
     list-style-type: none;
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-between;
   }
   .equipment-list li {
     padding: 0.25rem 0;
   }
+  .equipment-list-left {
+    padding-right: 15%;
+  }
+  .header-button,
+  .header-tab {
+    display: none;
+  }
+  .headshot {
+    padding: 1rem;
+  }
+  .dan-container {
+    text-align: right;
+  }
 
-  @media (max-width: 35em) {
+  @media (max-width: 95em) {
+    .opening-container {
+      /* margin-top: 4.5rem; */
+      padding: 1.5rem 1rem 2rem;
+    }
+    .story-container,
+    .white-container {
+      padding: 1.5rem 1rem 2rem;
+    }
+  }
+  @media (max-width: 58.2em) {
     body {
       max-width: 80vw;
     }
     .skyline {
       width: 80vw;
     }
-    .header-link-container {
+    /* header {
       display: none;
+    } */
+    .header-container,
+    .header-link-container,
+    .header-logo {
+      display: none;
+    }
+    .header-button {
+      display: block;
+    }
+    .header-tab {
+      /* display: flex;
+      flex-direction: column;
+      align-items: center; */
+      display: grid;
+      border-radius: 10px 0 0 10px;
+      /* background-color: var(--guardian-green);
+      position: fixed;
+      max-width: min-content;
+      left: 50%;
+      top: 50%; */
     }
     .opening-container {
       margin-top: 4.5rem;
       padding: 1.5rem 1rem 2rem;
+    }
+    .story-container,
+    .white-container {
+      padding: 1.5rem 1rem 2rem;
+    }
+    .equipment-list-left {
+      padding-right: 5%;
+    }
+  }
+  @media (max-width: 35em) {
+    .flex {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .equipment-list {
+      align-items: flex-start;
+    }
+    .email-button {
+      margin: 1rem 0 0 1rem;
+    }
+    .member-header-container {
+      flex-direction: column;
+      text-align: center;
+    }
+    .dan-container {
+      text-align: center;
     }
   }
 </style>
@@ -63,6 +141,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
   </head>
 
   <body>
+    <HeaderTab client:load />
     <Header />
     <main>
       <div class="content-container">
