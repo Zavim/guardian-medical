@@ -34,7 +34,8 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
     padding: 1.5rem 10rem 2rem;
     border-radius: 0 0 10px 10px;
   }
-  .white-container {
+  .gray-container {
+    background-color: hsl(0, 0%, 90%);
     padding: 1.5rem 10rem 2rem;
     border-radius: 0 0 10px 10px;
   }
@@ -87,19 +88,20 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
       padding: 1.5rem 1rem 2rem;
     }
     .story-container,
-    .white-container {
+    .gray-container {
       padding: 1.5rem 1rem 2rem;
     }
   }
   @media (max-width: 58.2em) {
     body {
+      margin-top: 19.7%;
       max-width: 90vw;
     }
     ul {
       padding: 0 1rem;
     }
     .skyline {
-      width: 80vw;
+      width: 90vw;
     }
     /* header {
       display: none;
@@ -138,7 +140,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
       padding: 1.5rem 1rem 2rem;
     }
     .story-container,
-    .white-container {
+    .gray-container {
       padding: 1.5rem 1rem 2rem;
     }
     .equipment-list-left {
@@ -146,6 +148,9 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
     }
   }
   @media (max-width: 35em) {
+    body {
+      margin-top: 19.7%;
+    }
     .flex {
       flex-direction: column;
       align-items: flex-start;
