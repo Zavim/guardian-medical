@@ -2,11 +2,25 @@
 import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 import HeaderTab from "../components/HeaderTab.astro";
+import HeaderTabButton from "../components/HeaderTabButton.jsx";
+// import HeaderLink from "../components/HeaderLink.astro";
 import Footer from "../components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
 ---
 
 <style is:global>
+  @keyframes slidein {
+    from {
+      margin-left: 100%;
+      /* width: 300%; */
+    }
+
+    to {
+      margin-left: 0%;
+      /* width: 100%; */
+    }
+  }
+
   p {
     padding: 0.75rem 1rem 0;
   }
@@ -47,11 +61,24 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
   .header-tab {
     display: none;
   }
+  .header-button {
+    border: none;
+    border-radius: 10px 0 0 10px;
+    color: #fffcf7;
+    background-color: var(--guardian-green);
+    padding: 1em;
+  }
+  .header-button:hover {
+    background-color: var(--guardian-dark-green);
+  }
   .headshot {
     padding: 1rem;
   }
   .dan-container {
     text-align: right;
+  }
+  .dan-container-mobile {
+    display: none;
   }
 
   @media (max-width: 95em) {
@@ -68,6 +95,9 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
     body {
       max-width: 80vw;
     }
+    ul {
+      padding: 0 1rem;
+    }
     .skyline {
       width: 80vw;
     }
@@ -83,16 +113,25 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
       display: block;
     }
     .header-tab {
-      /* display: flex;
-      flex-direction: column;
-      align-items: center; */
       display: grid;
+      animation-duration: 0.35s;
+      animation-name: slidein;
+    }
+    .header-tab:active {
+      transition: all ease-in;
+    }
+    .header-button-container {
+      display: flex;
+      /* border: none; */
       border-radius: 10px 0 0 10px;
-      /* background-color: var(--guardian-green);
+      background-color: var(--guardian-green);
+      box-shadow: 0 0.25rem 0.5rem hsl(0, 0%, 60%);
       position: fixed;
-      max-width: min-content;
-      left: 50%;
-      top: 50%; */
+      /* max-width: min-content; */
+      right: 0;
+      top: 50vh;
+      overflow: hidden;
+      /* bottom: 15%; */
     }
     .opening-container {
       margin-top: 4.5rem;
@@ -121,8 +160,11 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
       flex-direction: column;
       text-align: center;
     }
-    .dan-container {
-      text-align: center;
+    .dan-container-right {
+      display: none;
+    }
+    .dan-container-mobile {
+      display: block;
     }
   }
 </style>
@@ -141,7 +183,11 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
   </head>
 
   <body>
-    <HeaderTab client:load />
+    <!-- <HeaderTab /> -->
+
+    <HeaderTabButton client:load>
+      <HeaderTab />
+    </HeaderTabButton>
     <Header />
     <main>
       <div class="content-container">
