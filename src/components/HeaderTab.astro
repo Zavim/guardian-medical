@@ -3,6 +3,11 @@ import HeaderLink from "./HeaderLink.astro";
 ---
 
 <nav class="header-tab">
+  <img
+    class="tab-logo"
+    src="/logo-transparent.svg"
+    alt="skyline view of Cleveland, Ohio"
+  />
   <HeaderLink href="/">Home</HeaderLink>
   <HeaderLink href="/sell">Sell to Us!</HeaderLink>
   <HeaderLink href="/team">Our Team</HeaderLink>
@@ -26,5 +31,11 @@ import HeaderLink from "./HeaderLink.astro";
   }
   .header-tab a {
     padding-bottom: 0.25em;
+  }
+  .tab-logo {
+    position: relative;
+    /* background-color: var(--guardian-green); */
+    width: 7rem;
+    padding-bottom: 1em;
   }
 </style>
